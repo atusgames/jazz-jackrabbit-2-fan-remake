@@ -16,7 +16,7 @@ function SlideShow() {
     };
 
     return (
-        <div className="w-96 aspect-video">
+        <div className="w-[32rem] aspect-video">
             <YoutubeVid url="https://www.youtube.com/embed/yL4jmEFELbI" />
             <div className="flex justify-center items-center gap-5 py-1 bg-slate-800 bg-opacity-35 rounded-b-xl text-blue-500">
                 <button className='hover:brightness-150 duration-150' onClick={() => setSlideIndex((slideIndex - 1) % slides.length)}>
