@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom"
 // import { useState } from 'react'
 
-import NavBar from './shared/navbar'
+import JazzJackrabbit from "./components/JazzJackrabbit"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/jazz-jackrabbit-2-remake" />} />
-        <Route path="/jazz-jackrabbit-2-remake" element={<NavBar />} />
+        <Route path="/jazz-jackrabbit-2-remake" element={<JazzJackrabbit />} />
       </Routes>
     </BrowserRouter>
   )
