@@ -40,24 +40,26 @@ function SlideShow() {
         editor_2,
     ]
 
-    const nextSlide = (id: string) => {
-        setSlideIndex((slideIndex + 1) % slides.length);
+    const nextSlide = () => {
+        const idx = (slideIndex + 1) % slides.length;
+        setSlideIndex(idx);
 
         // Scroll to the selected element
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        const element = document.getElementById(`${idx}`);
+        element?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     };
 
-    const prevSlide = (id: string) => {
-        setSlideIndex((slideIndex - 1 + slides.length) % slides.length);
+    const prevSlide = () => {
+        const idx = (slideIndex - 1 + slides.length) % slides.length;
+        setSlideIndex(idx);
 
         // Scroll to the selected element
-        const element = document.getElementById(id);
-        element?.scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        const element = document.getElementById(`${idx}`);
+        element?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
 
     return (
-        <div className="w-[32rem] aspect-video bg-purple-900 bg-opacity-10 rounded-b-xl">
+        <div className="w-full aspect-video bg-purple-900 bg-opacity-10 rounded-b-xl">
             {/* Selected element */}
             {slides[slideIndex]}
 
@@ -72,10 +74,10 @@ function SlideShow() {
 
             {/* Navigation */}
             <div className="flex justify-center items-center gap-5 py-1 bg-slate-800 bg-opacity-35 rounded-b-xl text-blue-500">
-                <button className='hover:brightness-150 duration-150' onClick={() => prevSlide(`${slideIndex}`)}>
+                <button className='hover:brightness-150 duration-150' onClick={prevSlide}>
                     <IoMdArrowDropleftCircle />
                 </button>
-                <button className='hover:brightness-150 duration-150' onClick={() => nextSlide(`${slideIndex}`)}>
+                <button className='hover:brightness-150 duration-150' onClick={nextSlide}>
                     <IoMdArrowDroprightCircle />
                 </button>
             </div>
