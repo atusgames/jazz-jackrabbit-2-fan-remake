@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: radial-gradient(circle, #2b4554, #213541);
+}
+
+html {
+    scroll-behavior: smooth;
+}
