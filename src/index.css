@@ -4,8 +4,24 @@
 
 body {
     background: radial-gradient(circle, #2b4554, #213541);
+    overflow-x: hidden;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #213541;
+    scrollbar-track-color: #919ca3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6282a3;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a536b;
 }
