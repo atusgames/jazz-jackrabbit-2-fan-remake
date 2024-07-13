@@ -1,12 +1,12 @@
 
 function SystemRequirements() {
     return (
-        <div className="w-full mt-10 mb-14">
-            <h2 className="text-white text-2xl mb-3">Requisitos del Sistema</h2>
-            <p className="text-white break-words text-sm">
+        <div className="w-full mt-6 sm:mt-10 mb-14">
+            <h2 className="text-white text-lg sm:text-2xl mb-3">Requisitos del Sistema</h2>
+            <p className="text-white break-words text-xs sm:text-sm">
                 El juego fue hecho para ser jugado en sistemas operativos basados en Linux.
             </p>
-            <p className="text-white break-words text-sm mt-2">
+            <p className="text-white break-words text-xs sm:text-sm mt-2">
                 <strong>Tested:</strong> <br />
 
                 <ul className="list-disc ml-4">

@@ -64,7 +64,7 @@ function SlideShow() {
             {slides[slideIndex]}
 
             {/* Previews */}
-            <div className="bg-slate-800 bg-opacity-35 overflow-x-scroll w-full py-3 px-5 h-20 flex gap-5">
+            <div className="bg-slate-800 bg-opacity-35 overflow-x-scroll w-full py-3 px-5 h-14 sm:h-20 flex gap-5">
                 {previews.map((_, index) => (
                     <button id={`${index}`} key={index} className={`aspect-video h-full bg-opacity-20 hover:brightness-110 ${index === slideIndex ? 'bg-blue-600 scale-110' : 'bg-blue-300'}`} onClick={() => setSlideIndex(index)}>
                         <img className='w-full h-full object-contain' src={previews[index]} />
